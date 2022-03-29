@@ -26,7 +26,7 @@ def main():
         prof_cells = professions_table.find_all("td", attrs={"class": "last"})
         for cell in prof_cells:
             for txt in cell.a.stripped_strings:
-                profession = txt
+                profession = txt.lower()
                 professions[letter].append(profession)
                 break
 
